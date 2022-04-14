@@ -11,6 +11,11 @@ In this project, we will be doing an exploratory data analysis on the relationsh
 We will be using data from COVID Data Tracker, which is a website managed by the CDC, to look for relationships between positive COVID-19 cases and vaccination status among different age groups. We will be looking at the whole population of the U.S. to get more accurate information on the effectiveness of the COVID-19 vaccine. If the vaccine is effective, we should see that as the number of vaccinated people goes up, the amount of COVID-19 cases will go down. 
 
 ## Table of Contents
+### Introduction
+### Methods
+### Results
+### Discussion
+### References
 
 
 ## Introduction
