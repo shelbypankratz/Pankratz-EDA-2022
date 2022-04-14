@@ -1,5 +1,10 @@
 # Pankratz-EDA-2022
+
+This project was designed to observe different age groups and to see how vaccination status and COVID-19 cases were correlated, if at all. 
+
 ## Correlation Between COVID Cases and Vaccination Status Among Different Age Groups in the U.S. 
+
+MiKayla Bolduc, Shelby Pankratz
 
 ## Abstract
 COVID-19 vaccinations in the U.S. first became available to select populations, such as the elderly and immunocompromised, back in June 2020, right after COVID-19 broke out in March. Fast forward to present day where vaccinations are available to everyone, along with the development of a booster shot. However, since then, vaccines have become a very controversial topic. 
