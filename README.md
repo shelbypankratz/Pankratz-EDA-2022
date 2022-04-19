@@ -1,55 +1,64 @@
 # Pankratz-EDA-2022
 
-This project was designed to observe different age groups and to see how vaccination status and COVID-19 cases were correlated, if at all. 
+This project was designed to observe different age groups and to see how vaccination status and COVID-19 cases were correlated, if at all.
 
-## Correlation Between COVID Cases and Vaccination Status Among Different Age Groups in the U.S. 
+## Correlation Between COVID Cases and Vaccination Status Among Different Age Groups in the U.S.
 
-MiKayla Bolduc, Shelby Pankratz
+Shelby Pankratz
+
+Minnesota State University Moorhead Biosciences Department
 
 ## Abstract
-COVID-19 vaccinations in the U.S. first became available to select populations, such as the elderly and immunocompromised, back in June 2020, right after COVID-19 broke out in March. Fast forward to present day where vaccinations are available to everyone, along with the development of a booster shot. However, since then, vaccines have become a very controversial topic. 
 
-The COVID-19 vaccines were the fastest vaccines to get approved for use. This has led to many people wondering, how effective are these vaccines?
-
-In this project, we will be doing an exploratory data analysis on the relationship between the number of COVID-19 cases and the number of people vaccinated. This will help to show the effectiveness of the vaccine. 
-
-We will be using data from COVID Data Tracker, which is a website managed by the CDC, to look for relationships between positive COVID-19 cases and vaccination status among different age groups. We will be looking at the whole population of the U.S. to get more accurate information on the effectiveness of the COVID-19 vaccine. If the vaccine is effective, we should see that as the number of vaccinated people goes up, the amount of COVID-19 cases will go down. 
+-   Vaccines first became available for select populations in June 2020
+-   Because of the rate vaccines were distributed, it left people skeptical about its effects and effectiveness
+-   This project tests the relationship between number of COVID-19 cases and the number of people vaccinated in different age groups
+-   We are using data from the CDC website to see if there's a relationship between the two variables. We are predicting that as the number of vaccinated people go up, the number of COVID-19 cases will go down.
 
 ## Table of Contents
-### Introduction
-### Methods
-### Results
-### Discussion
-### References
 
+### Introduction
+
+### Methods
+
+### Results
+
+### Discussion
+
+### References
 
 ## Introduction
 
-
 ## Methods
-
 
 ### Data Acquisition
 
 COVID data: Cases
 
 1.  Go to <https://covid.cdc.gov/covid-data-tracker/#demographics>
-2. Scroll to "View Data"
-3. Click on the Export Tab
-4. Click on CSV
-5.  Save to data folder (Public_Dataset_Age_1_)
+2.  Scroll to "View Data"
+3.  Click on the Export Tab
+4.  Click on CSV
+5.  Save to data folder (Public_Dataset_Age_1\_)
 
 COVID data: Vaccination Status
 
-1. Go to https://data.cdc.gov/Vaccinations/COVID-19-Vaccination-and-Case-Trends-by-Age-Group-/gxj9-t96f
-2. Scroll to "View Data"
-3. Click on the Export Tab
-4. Click on CSV
-5.  Save to data folder (COVID_19_Vaccination_and_Case_Trends_by_Age_Group_United_States_1_.csv)
-
+1.  Go to <https://data.cdc.gov/Vaccinations/COVID-19-Vaccination-and-Case-Trends-by-Age-Group-/gxj9-t96f>
+2.  Scroll to "View Data"
+3.  Click on the Export Tab
+4.  Click on CSV
+5.  Save to data folder (COVID_19_Vaccination_and_Case_Trends_by_Age_Group_United_States_1\_.csv)
 
 ## Results
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
 
 ## Discussion
 
 ## References
+
+RStudio Team (2020). RStudio: Integrated Development for R. RStudio, PBC, Boston, MA URL <http://www.rstudio.com/>.
+
+Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, <https://doi.org/10.21105/joss.01686>
