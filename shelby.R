@@ -82,5 +82,3 @@ ggsave("figs/case data.png", height = 8, width = 12, units="in", dpi=600)
 # implications
   # having public data available
 
-# personal access token for this project
-  # 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
