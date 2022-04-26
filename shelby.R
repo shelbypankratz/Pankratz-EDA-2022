@@ -82,4 +82,7 @@ ggsave("figs/case data.png", height = 8, width = 12, units="in", dpi=600)
 # implications
   # having public data available
 
+<<<<<<< HEAD
 # make sure to insert a picture
+=======
+>>>>>>> 48e49a08a786267161fe33362cbf956e73244972

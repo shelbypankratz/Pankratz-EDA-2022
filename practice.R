@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 library(tidyverse)
 
 age_group_levels <- c("<5", "5-11", "<12", "16-17", "18-24", 
@@ -46,3 +47,6 @@ counties_sf %>%
 
 
 
+=======
+citation(rstudio)
+>>>>>>> 48e49a08a786267161fe33362cbf956e73244972
