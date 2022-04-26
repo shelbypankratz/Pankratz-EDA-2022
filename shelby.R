@@ -12,7 +12,7 @@ age_group_levels <- c("<5", "5-11", "<12", "16-17", "18-24",
 ## vaccination data ----
 # raw data ----
 vax_data <- 
-  read_csv("data/COVID-19_Vaccination_Demographics_in_the_United_States_National.csv") %>% 
+  read_csv("data/COVID-19_Vaccination_Demographics_in_the_United_States_National (1).csv") %>% 
   filter(str_starts(Demographic_category, "Ages_")) %>%
 rename(age_group = Demographic_Category) %>% 
   mutate(
@@ -82,5 +82,4 @@ ggsave("figs/case data.png", height = 8, width = 12, units="in", dpi=600)
 # implications
   # having public data available
 
-# personal access token for this project
-  # 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
+# make sure to insert a picture
