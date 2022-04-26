@@ -46,7 +46,3 @@ counties_sf %>%
   geom_sf(fill = "cornflowerblue", color = "#00FFFF")
 
 
-
-=======
-citation(rstudio)
->>>>>>> 48e49a08a786267161fe33362cbf956e73244972
