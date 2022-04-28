@@ -51,10 +51,6 @@ COVID data: Vaccination Status
 
 ## Results
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
 ## Discussion
 
 ## References
