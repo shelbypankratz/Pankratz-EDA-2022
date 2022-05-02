@@ -12,4 +12,8 @@
 
 -   also changed the color on the graph created above
 
--   created the .md doc that will contain all the code and inserted the image of the graph
+-   created the R markdown doc that will contain all the code and inserted the image of the graphs
+
+-   insert code and explanation into the report
+
+-   

@@ -1,3 +1,7 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ## Correlation Between COVID Cases and Vaccination Status Among Different Age Groups in the U.S.
 
 Shelby Pankratz
@@ -8,11 +12,11 @@ Minnesota State University Moorhead Biosciences Department
 
 ## Introduction
 
-COVID-19 vaccinations in the U.S. first became available to select populations, such as the elderly and immunocompromised, back in June 2020, right after COVID-19 broke out in March. Fast forward to present day where vaccinations are available to everyone, along with the development of a booster shot. However, since then, vaccines have become a very controversial topic. The COVID-19 vaccines were the fastest vaccines to get approved for use. This has led to many people wondering, how effective are these vaccines? In this project, we will be doing an exploratory data analysis on the relationship between the number of COVID-19 cases and the number of people vaccinated. This will help to show the effectiveness of the vaccine. We will be using data from COVID Data Tracker, which is a website managed by the CDC, to look for relationships between positive COVID-19 cases and vaccination status among different age groups. We will be looking at the whole population of the U.S. to get more accurate information on the effectiveness of the COVID-19 vaccine. If the vaccine is effective, we should see that as the number of vaccinated people goes up, the amount of COVID-19 cases will go down. 
+COVID-19 vaccinations in the U.S. first became available to select populations, such as the elderly and immunocompromised, back in June 2020, right after COVID-19 broke out in March. Fast forward to present day where vaccinations are available to everyone, along with the development of a booster shot. However, since then, vaccines have become a very controversial topic. The COVID-19 vaccines were the fastest vaccines to get approved for use. This has led to many people wondering, how effective are these vaccines? In this project, we will be doing an exploratory data analysis on the relationship between the number of COVID-19 cases and the number of people vaccinated. This will help to show the effectiveness of the vaccine. We will be using data from COVID Data Tracker, which is a website managed by the CDC, to look for relationships between positive COVID-19 cases and vaccination status among different age groups. We will be looking at the whole population of the U.S. to get more accurate information on the effectiveness of the COVID-19 vaccine. If the vaccine is effective, we should see that as the number of vaccinated people goes up, the amount of COVID-19 cases will go down.
 
 ## Methods
 
-Data acquisition of the datasets from the CDC website is listed in the steps below. 
+Data acquisition of the data sets from the CDC website is listed in the steps below.
 
 ### Data Acquisition
 
@@ -36,11 +40,52 @@ COVID data: Vaccination Status
 
 5.  Save to data folder (COVID_19_Vaccination_and_Case_Trends_by_Age_Group_United_States_1\_.csv)
 
-##  Results
+After downloading the data, the first step is renaming the data set, starting with the vaccination data set.
 
-![](http://127.0.0.1:12253/graphics/c8b851d0-c93b-45b3-8fbb-1145603cabc5.png)
+    vax_data <- read_csv("data/COVID-19_Vaccination_Demographics_in_the_United_States_National (1).csv")
 
-![](http://127.0.0.1:12253/graphics/16e37e57-5396-4658-bd31-00659497c67f.png)
+To get rid of the unwanted variables and to make the variables that are to be kept a little easier to read, the rename, filter, and mutate functions are used to get the desired table. This line of code specifically works on renaming and mutating the column that deals with the age groups.
+
+    filter(str_starts(Demographic_category, "Ages_")) %>% 
+      rename(age_group = Demographic_category) %>% 
+      mutate(
+        Date = as.Date(Date, format = "%m/%d/%Y"),
+        age_group=str_remove(age_group, "Ages_"),
+        age_group=str_remove(age_group, "_yrs"),
+        age_group=str_remove(age_group, "yrs")
+      ) %>% 
+
+The next step that took place was making sure that all the age groups were included in the table. Because of this, a line of code had to be added beforehand to make sure that R could read the age data
+
+    age_group_levels <- c("<5", "5-11", "<12", "16-17", "18-24", 
+                          "25-39", "40-49", "50-64", "65-74", "75+")
+
+After this code, R is able to recognize the data set "age_group_levels" and the mutate function is used to factor the age groups.
+
+    mutate(age_group = factor(age_group, levels = age_group_levels)) %>%
+
+In this data set, there were a couple of age groups that overlapped with each other, or ones that weren't needed. The filter function was used to get remove them from the table as well.
+
+    filter(!age_group %in% c("<12yrs", "<5yrs", "12-15", "16-17", "<12", "<5")) %>%
+
+After that, rename the other columns so they make sense and select the variables that we want to be displayed on the table and use the print function to show the data.
+
+     rename(
+        per_vax = Series_Complete_Pop_pct_agegroup, 
+        date = Date
+      ) %>%
+      select(date, age_group, per_vax) %>%
+      print()
+
+## Results
+
+![](http://127.0.0.1:14047/graphics/ee23f047-f059-4a82-b58e-22785ffab872.png)
+
+Figure 1. The percentage of different age groups that are fully vaccinated ranging from January 2021 to January 2022.
+
+![](http://127.0.0.1:14047/graphics/5f74d300-1a6d-4ea8-838b-dc51162880db.png){width="583"}
+
+Figure 2. The number of total positive COVID-19 cases from December 2021 to January 2022 in different age groups.
 
 ## Discussion
 
@@ -50,11 +95,10 @@ RStudio Team (2020). RStudio: Integrated Development for R. RStudio, PBC, Boston
 
 Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, <https://doi.org/10.21105/joss.01686>
 
-
-
 ## Including Plots
 
 You can also embed plots, for example:
+
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
