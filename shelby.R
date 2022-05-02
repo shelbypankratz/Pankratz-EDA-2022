@@ -45,6 +45,10 @@ cases_by_age <-
   mutate(date = as.Date(date)) %>% 
   print()
 
+# stat test
+chisq.test(table(cases_by_age$age_range, cases_by_age$total_cases))
+
+
 # multiple graphs
 cases_by_age %>% 
   filter(date == as.Date("2022-01-31") | date == as.Date("2021-12-01")) %>% 
@@ -54,5 +58,7 @@ cases_by_age %>%
   facet_wrap(~ age_range)+
   labs(y="Total Cases", x="Date", title = "COVID-19 Cases in the U.S. (from Dec 2021  to Jan 2022)")+
   theme_gray(base_size = 12)+
-  theme(axis.text.x=element_text(size=rel(.8)))+
+  theme(axis.text.x=element_text(size=rel(.8)))
+  
+  #+
 ggsave("figs/case data.png", height = 8, width = 12, units="in", dpi=600)
