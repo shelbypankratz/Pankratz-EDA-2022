@@ -92,6 +92,7 @@ vax_data %>%
   theme_gray(base_size = 10)
 
 ```
+![image](https://user-images.githubusercontent.com/97545893/166506777-d00f3981-2d46-44b7-bce1-8b5328c655e4.png)
 
 ![](http://127.0.0.1:43185/chunk_output/s/6D67F2D2/cm2seb2z82a3x/00000c.png?resize=14)
 
@@ -106,5 +107,7 @@ vax_data %>%
       theme_gray(base_size = 12)+
       theme(axis.text.x=element_text(size=rel(.8)))
     ```
+![image](https://user-images.githubusercontent.com/97545893/166506961-f960253b-b7d8-4669-b153-72d8a4f35ee8.png)
+
 
 ![](http://127.0.0.1:43185/chunk_output/s/6D67F2D2/czpqi6kopsvsm/000003.png?resize=15)
