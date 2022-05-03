@@ -91,8 +91,9 @@ vax_data %>%
   geom_line() +
   theme_gray(base_size = 10)
 
-http://127.0.0.1:43185/chunk_output/s/6D67F2D2/cm2seb2z82a3x/00000c.png?resize=14
 ```
+
+![](http://127.0.0.1:43185/chunk_output/s/6D67F2D2/cm2seb2z82a3x/00000c.png?resize=14)
 
     ```{r cases, echo=FALSE}
     cases_by_age %>% 
@@ -105,3 +106,5 @@ http://127.0.0.1:43185/chunk_output/s/6D67F2D2/cm2seb2z82a3x/00000c.png?resize=1
       theme_gray(base_size = 12)+
       theme(axis.text.x=element_text(size=rel(.8)))
     ```
+
+![](http://127.0.0.1:43185/chunk_output/s/6D67F2D2/czpqi6kopsvsm/000003.png?resize=15)
