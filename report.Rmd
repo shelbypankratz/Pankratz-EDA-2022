@@ -86,7 +86,14 @@ After that, rename the other columns so they make sense and select the variables
 ## Results
 
 ```{r vax, echo=FALSE}
-plot(vax_line_graph)
+vax_data %>% 
+  filter(date == as.Date("2022-01-01") | date == as.Date("2021-01-01")) %>%
+  ggplot(aes(x = date, y = per_vax, color = age_group)) +
+  labs(y="% Fully Vaccinated", 
+       x="Date", 
+       title="Vaccination Status Among  Age Groups (Jan 2021-Jan2022)") +
+  geom_line() +
+  theme_gray(base_size = 10)
 ```
 
 Figure 1. The percentage of different age groups that are fully vaccinated ranging from January 2021 to January 2022.
