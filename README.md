@@ -17,3 +17,8 @@ Minnesota State University Moorhead Biosciences Department
 
 ## Table of Contents
 
+[Report](https://github.com/shelbypankratz/Pankratz-EDA-2022/blob/main/report.Rmd)
+
+[Changes](https://github.com/shelbypankratz/Pankratz-EDA-2022/blob/main/changes.md)
+
+[Rscript](https://github.com/shelbypankratz/Pankratz-EDA-2022/blob/main/shelby.R)

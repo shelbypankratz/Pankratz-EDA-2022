@@ -23,6 +23,7 @@ vax_data <- read_csv("data/COVID-19_Vaccination_Demographics_in_the_United_State
   print()
 
 # vax line graph ----
+vax_line_graph <-
 vax_data %>% 
   filter(date == as.Date("2022-01-01") | date == as.Date("2021-01-01")) %>%
   ggplot(aes(x = date, y = per_vax, color = age_group)) +
@@ -50,6 +51,7 @@ chisq.test(table(cases_by_age$age_range, cases_by_age$total_cases))
 
 
 # cases: multiple graphs ----
+case_graph <-
 cases_by_age %>% 
   filter(date == as.Date("2022-01-31") | date == as.Date("2021-12-01")) %>% 
   ggplot() +
