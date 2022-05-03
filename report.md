@@ -90,6 +90,8 @@ vax_data %>%
        title="Vaccination Status Among  Age Groups (Jan 2021-Jan2022)") +
   geom_line() +
   theme_gray(base_size = 10)
+
+http://127.0.0.1:43185/chunk_output/s/6D67F2D2/cm2seb2z82a3x/00000c.png?resize=14
 ```
 
     ```{r cases, echo=FALSE}
