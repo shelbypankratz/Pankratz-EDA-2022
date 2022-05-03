@@ -1,6 +1,6 @@
 library(tidyverse)
 
-# vax data 
+# vax data ---- 
 age_group_levels <- c("<5", "5-11", "<12", "16-17", "18-24", 
                       "25-39", "40-49", "50-64", "65-74", "75+")
 
@@ -22,7 +22,7 @@ vax_data <- read_csv("data/COVID-19_Vaccination_Demographics_in_the_United_State
   select(date, age_group, per_vax) %>%
   print()
 
-# line graph 
+# vax line graph ----
 vax_data %>% 
   filter(date == as.Date("2022-01-01") | date == as.Date("2021-01-01")) %>%
   ggplot(aes(x = date, y = per_vax, color = age_group)) +
@@ -35,7 +35,7 @@ vax_data %>%
 
 
 
-# cases
+# cases ----
 library(readxl)
 cases_by_age <- 
   read_excel("data/Public-Dataset-Age (1).XLSX") %>% 
@@ -45,11 +45,11 @@ cases_by_age <-
   mutate(date = as.Date(date)) %>% 
   print()
 
-# stat test
+# stat test for cases ----
 chisq.test(table(cases_by_age$age_range, cases_by_age$total_cases))
 
 
-# multiple graphs
+# cases: multiple graphs ----
 cases_by_age %>% 
   filter(date == as.Date("2022-01-31") | date == as.Date("2021-12-01")) %>% 
   ggplot() +
@@ -59,6 +59,3 @@ cases_by_age %>%
   labs(y="Total Cases", x="Date", title = "COVID-19 Cases in the U.S. (from Dec 2021  to Jan 2022)")+
   theme_gray(base_size = 12)+
   theme(axis.text.x=element_text(size=rel(.8)))
-  
-  #+
-ggsave("figs/case data.png", height = 8, width = 12, units="in", dpi=600)

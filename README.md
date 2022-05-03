@@ -16,3 +16,4 @@ Minnesota State University Moorhead Biosciences Department
 -   We are using data from the CDC website to see if there's a relationship between the two variables. We are predicting that as the number of vaccinated people go up, the number of COVID-19 cases will go down.
 
 ## Table of Contents
+
