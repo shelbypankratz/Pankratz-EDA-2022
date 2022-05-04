@@ -111,3 +111,25 @@ vax_data %>%
 
 
 ![](http://127.0.0.1:43185/chunk_output/s/6D67F2D2/czpqi6kopsvsm/000003.png?resize=15)
+
+## Discussion
+
+In the case data, the most drastic difference in number of cases was in the 21-30 year old age group. This is similar to the vaccination data where the age group of 18-24 year old was the lowest, disregarding the 5-11 age group because that group was only recently approved to be fully vaccinated . This subgroup of young adults is particularly swayed by herd immunity, and looking into social norms, showed "relatively poor adherence to physical distancing guidelines" (Graupensperger, et al.).
+
+Historical evidence from influenza pandemics show "that pandemics tend to come in waves over the first 2--5 years as the population immunity builds-up (naturally or through vaccination), and then the number of infected cases tends to decrease" (Petersen, et al.). Here we are into year two of the COVID-19 pandemic, and while it seems that the worst is over, there is still so much that could happen in the next few years as far as vaccine development, testing, epidemiological studies, etc. However, as this pandemic continues, and will eventually come to an end, studies like this could be useful for future research on COVID-19.
+
+## References
+
+Graupensperger, Scott, et al. "Social Norms and Vaccine Uptake: College Students' COVID Vaccination Intentions, Attitudes, and Estimated Peer Norms and Comparisons with Influenza Vaccine." ScienceDirect, 8 Apr. 2021, <https://www-sciencedirect-com.trmproxy.mnpals.net/science/article/pii/S0264410X21002863>.
+
+Hadley Wickham and Jennifer Bryan (2019). readxl: Read Excel Files. R package version 1.3.1. <https://CRAN.R-project.org/package=readxl>.
+
+Nguyen, Kimberly H, et al. "COVID-19 Vaccination Intent, Perceptions, and Reasons for Not Vaccinating among Groups Prioritized for Early Vaccination --- United States, September and December 2020." Wiley Online Library, 31 Mar. 2021, <https://onlinelibrary.wiley.com/doi/full/10.1111/ajt.16560>. 
+
+Petersen, Eskild, et al. "Comparing SARS-CoV-2 with SARS-CoV and Influenza Pandemics." The Lancet Infectious Diseases, vol. 20, no. 9, 2020, pp. e238-e244. ProQuest, <https://trmproxy.mnpals.net/login?url=https://www.proquest.com/scholarly-journals/comparing-sars-cov-2-with-influenza-pandemics/docview/2437381519/se-2?accountid=12548>, [doi:http://dx.doi.org/10.1016/S1473-3099(20)30484-9](doi:http://dx.doi.org/10.1016/S1473-3099(20)30484-9){.uri}.
+
+Pogue, Kendall et al. "Influences on Attitudes Regarding Potential COVID-19 Vaccination in the United States." Vaccines vol. 8,4 582. 3 Oct. 2020, <doi:10.3390/vaccines8040582>.
+
+RStudio Team (2020). RStudio: Integrated Development for R. RStudio, PBC, Boston, MA URL <http://www.rstudio.com/>.
+
+Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, <https://doi.org/10.21105/joss.01686>.
